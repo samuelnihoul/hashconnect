@@ -19,6 +19,7 @@ import { SmartcontractCallComponent } from './components/smartcontract-call/smar
 import { SmartcontractCreateComponent } from './components/smartcontract-create/smartcontract-create.component';
 import { SmartcontractDeleteComponent } from './components/smartcontract-delete/smartcontract-delete.component';
 import { SmartcontractExecuteComponent } from './components/smartcontract-execute/smartcontract-execute.component';
+import { TokenUpdateComponent } from './components/token-update/token-update.component';
 
 import { HashconnectService } from './services/hashconnect.service';
 import { SigningService } from './services/signing.service';
@@ -68,6 +69,11 @@ export class AppComponent {
 
     createToken() {
         const dialogPopup = new DialogInitializer(CreateTokenComponent);
+        this.doPopupStuff(dialogPopup);
+    }
+
+    updateToken() {
+        const dialogPopup = new DialogInitializer(TokenUpdateComponent);
         this.doPopupStuff(dialogPopup);
     }
     

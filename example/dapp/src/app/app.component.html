@@ -13,6 +13,7 @@
         
         <h3>Tokens</h3>
         <button class="primary" (click)="createToken()" [disabled]="HashConnectService.status != 'Paired'">Create Token</button>
+        <button class="primary" (click)="updateToken()" [disabled]="HashConnectService.status != 'Paired'">Update Token</button>
         <button class="primary" (click)="deleteToken()" [disabled]="HashConnectService.status != 'Paired'">Delete Token</button>
         <button class="primary" (click)="mintToken()" [disabled]="HashConnectService.status != 'Paired'">Mint Token</button>
         <button class="primary" (click)="burnToken()" [disabled]="HashConnectService.status != 'Paired'">Burn Token</button>
